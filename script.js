@@ -1,5 +1,16 @@
 function minDate(dates) {
   //write you code here
+	let min_date = Date.now();
+	let min_date_string = "";
+
+	for(let i=0; i<dates.length; i++){
+		let date_in_milisec = (new Date(dates[i])).getTime();
+		if(date_in_milisec < min_date){
+			min_date = date_in_milisec;
+			min_date_string = dates[i];
+		}
+	}
+	return min_date_string;
 }
 
 // Do not change the code
